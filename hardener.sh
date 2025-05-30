@@ -12,7 +12,7 @@ sudo ufw allow 2222/tcp
 sudo systemctl disable --now cups bluetooth
 
 # Install security tools including fail2ban and sshguard
-sudo apt install rkhunter lynis fail2ban sshguard auditd -y
+sudo apt install rkhunter lynis fail2ban sshguard auditd aide -y
 
 # Configure fail2ban for SSH on port 2222
 sudo bash -c 'cat > /etc/fail2ban/jail.local << EOF
@@ -43,6 +43,9 @@ sudo systemctl enable --now auditd
 # Enable and start freshclam service
 sudo freshclam
 sudo systemctl enable --now clamav-freshclam
+
+# Enable and start aide service
+sudo aideinit
 
 # Enable automatic updates
 sudo apt install unattended-upgrades
