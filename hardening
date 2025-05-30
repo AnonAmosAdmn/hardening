@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "[*] Hardening Linux..."
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo ufw enable
 sudo ufw allow 2222/tcp
 sudo systemctl disable --now cups bluetooth
