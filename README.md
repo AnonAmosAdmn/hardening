@@ -1,30 +1,62 @@
-# Linux Hardening Script
-This script performs basic but essential hardening steps on Debian-based Linux systems.
-It automates system updates, firewall configuration, service disabling, and installs key security tools with configurations.
+# 🔒 Linux Hardening Script
+A comprehensive Bash script designed to harden Debian-based Linux systems by automating essential security configurations, installing key security tools, enabling intrusion prevention, and performing system audits.
 
+# 📦 Features
+This script performs the following tasks:
 
-# Features
-Updates and upgrades all system packages.
+# 🔧 System Setup
+Updates and upgrades system packages.
 
-Enables UFW firewall and opens SSH on port 2222.
+Enables the UFW firewall and allows SSH on port 2222.
 
-Disables unused services: cups and bluetooth.
+Disables unnecessary services: cups, bluetooth.
 
-Installs and configures:
+# 🛡️ Security Tools Installation
+Installs and configures the following security utilities:
 
-rkhunter (rootkit detection)
+Fail2ban – Brute-force protection.
 
-lynis (system security auditing)
+SSHGuard – Blocks malicious SSH login attempts.
 
-fail2ban (intrusion prevention for SSH)
+RKHunter – Rootkit scanner.
 
-sshguard (another intrusion prevention tool)
+Lynis – System security audit tool.
 
-Configures fail2ban to protect SSH on port 2222 with a ban after 5 failed login attempts lasting 1 hour.
+Auditd – Linux auditing daemon.
 
-Runs rootkit checks and security audits automatically.
+AIDE – File integrity checker.
 
-Starts and enables fail2ban and sshguard services.
+ClamAV – Antivirus engine.
+
+Unattended Upgrades – Enables automatic security updates.
+
+# ⚙️ Configurations
+Configures fail2ban for SSH protection on port 2222.
+
+Initializes aide to begin file integrity baseline checks.
+
+Runs freshclam and enables automatic virus database updates.
+
+# 🔍 Auditing
+Executes rkhunter for rootkit scanning.
+
+Executes lynis for a full system audit.
+
+Enables and starts services for:
+
+fail2ban
+
+sshguard
+
+auditd
+
+clamav-freshclam
+
+# 🚀 Usage
+Prerequisites
+A Debian-based Linux distribution (e.g., Ubuntu, Debian, Kali).
+
+Sudo privileges.
 
 
 # Run Script
