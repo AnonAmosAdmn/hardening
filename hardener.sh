@@ -31,9 +31,6 @@ sudo systemctl restart fail2ban
 # Update and run rootkit check
 sudo rkhunter --update && sudo rkhunter --check
 
-# Run Lynis security audit
-sudo lynis audit system
-
 # Enable and start fail2ban service
 sudo systemctl enable --now fail2ban
 
@@ -50,5 +47,8 @@ sudo systemctl enable --now clamav-freshclam
 # Enable automatic updates
 sudo apt install unattended-upgrades
 sudo dpkg-reconfigure unattended-upgrades
+
+# Run Lynis security audit
+sudo lynis audit system
 
 echo "[*] Linux hardening complete."
