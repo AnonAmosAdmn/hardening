@@ -1,9 +1,6 @@
 # 🔒 Linux Hardening Script
 A comprehensive Bash script designed to harden Debian-based Linux systems by automating essential security configurations, installing key security tools, enabling intrusion prevention, and performing system audits.
 
-# 📦 Features
-This script performs the following tasks:
-
 # 🔧 System Setup
 Updates and upgrades system packages.
 
