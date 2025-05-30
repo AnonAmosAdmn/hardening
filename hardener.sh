@@ -13,6 +13,7 @@ sudo systemctl disable --now cups bluetooth
 
 # Install security tools including fail2ban and sshguard
 sudo apt install rkhunter lynis fail2ban sshguard auditd aide -y
+sudo apt install libpam-tmpdir apt-listbugs apt-listchanges cryptsetup cryptmount -y
 
 # Configure fail2ban for SSH on port 2222
 sudo bash -c 'cat > /etc/fail2ban/jail.local << EOF
